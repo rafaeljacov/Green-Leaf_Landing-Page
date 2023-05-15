@@ -1,0 +1,45 @@
+:root {
+    font-family: Mukta, sans-serif;
+    --primary: #4CFA60;
+    --neutral: #F5FFF6;
+    --action: #5F5D7E;
+    --highlight: #22732B;
+}
+
+#navbar {
+    display: flex;
+    width: 100vw;
+    padding: 1.5em 2.5em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar #trademark{
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+}
+
+#navbar #companyName, #navbar #menuText{
+    color: var(--highlight);
+}
+
+#navbar #companyName {
+    font-size: 2em;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+}
+
+#navbar #menu {
+    display: flex;
+    flex-direction: column;
+}
+
+#navbar #menuText {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+#navbar #navLinks {
+    display: none;
+}
+
