@@ -14,10 +14,10 @@ export default function Navbar({ companyName, linkURL }: NavProp) {
                 <img src={Logo} id="logo" />
                 <h2 id="companyName">{companyName}</h2>
             </div>
-            <div id="menu">
+            <button id="menu">
                 <img src={menuIcon} id="menuIcon" alt="leafIcon" />
                 <p id="menuText">Menu</p>
-            </div>
+            </button>
             <ul id="navLinks">
                 <li>
                     <a href={linkURL}>Home</a>

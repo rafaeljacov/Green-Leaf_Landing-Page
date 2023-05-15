@@ -1,9 +1,14 @@
 :root {
     font-family: Mukta, sans-serif;
     --primary: #4CFA60;
-    --neutral: #F5FFF6;
     --action: #5F5D7E;
     --highlight: #22732B;
+    --black: #011403;
+    --black75: #404F42;
+    --black50: #7F8980;
+    --black25: #BFC4C0;
+    --black10: #E6E8E6;
+    --black5: #F2F3F2;
 }
 
 #navbar {
@@ -20,6 +25,10 @@
     gap: 0.7em;
 }
 
+#navbar #logo {
+    height: 3.5em;
+}
+
 #navbar #companyName, #navbar #menuText{
     color: var(--highlight);
 }
@@ -33,10 +42,12 @@
 #navbar #menu {
     display: flex;
     flex-direction: column;
+    border: unset;
+    background-color: unset;
 }
 
 #navbar #menuText {
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 500;
 }
 #navbar #navLinks {
