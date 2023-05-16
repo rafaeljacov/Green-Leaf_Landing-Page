@@ -13,7 +13,7 @@
     padding: 1em 2em clamp(3em, 20vh, 5em);
     display: flex;
     gap: 3em;
-    width: 100vw;   
+    width: 100vw;
     height: 88vh;
     flex-direction: column;
     justify-content: space-between;
@@ -41,7 +41,7 @@
     border-radius: 1em;
     font-size: clamp(1.3em, 2.6vw, 3rem);
     letter-spacing: 0.05em;
-    margin-top: 0.7em;
+    margin-top: 1.2em;
     text-align: center;
     padding: clamp(1em, 7vw, 1.7rem);
     color: var(--black5);
