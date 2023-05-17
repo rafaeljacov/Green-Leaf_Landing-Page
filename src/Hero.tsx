@@ -34,6 +34,12 @@ export default function Hero() {
         setButtonHover((h) => !h);
     }
 
+    function buttonClick() {
+        open(
+            'https://www.figma.com/file/tnvRRnPtETl7Gx4d6N7Emu/Untitled?type=design&node-id=53%3A172&t=tZDKf4NpQr98HQiB-1'
+        );
+    }
+
     return (
         <div id="Hero">
             <div id="content">
@@ -41,11 +47,10 @@ export default function Hero() {
                     Welcome to <span id="green">Green </span>
                     <span id="leaf">Leaf,</span>
                 </h1>
-                <p> 
-                    {heroContent}
-                </p>
+                <p>{heroContent}</p>
             </div>
             <button
+                onClick={buttonClick}
                 onMouseOver={hover}
                 onMouseOut={hoverOut}
                 className={buttonHover ? 'hovered' : undefined}

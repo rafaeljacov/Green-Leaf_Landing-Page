@@ -14,7 +14,6 @@
     display: flex;
     gap: 3em;
     width: 100vw;
-    height: 88vh;
     flex-direction: column;
     justify-content: space-between;
     background-image: url(./assets/background.svg);
@@ -54,7 +53,7 @@
 #Hero button {
     display: inline-block;
     width: 16rem;
-    padding: 0.4em;
+    padding: 0.4em 0.8em;
     border: unset;
     border-radius: 0.5em;
     background-color: var(--action);
@@ -88,6 +87,12 @@
         line-height: 1.7em;
         word-spacing: 0.08em;
     }
+
+    #Hero button {
+        width: fit-content;
+        font-size: 2.7em;
+    }
+
     #Hero button.hovered {
         background-color: var(--primary);
         color: var(--action);
