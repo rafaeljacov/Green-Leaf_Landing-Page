@@ -25,7 +25,7 @@
 
 .leaf-icon {
     position: absolute;
-    width: clamp(6em, 10vw, 15em);
+    width: clamp(4.5em, 15vw, 15em);
     bottom: 0;
     right: 0;
 }

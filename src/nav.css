@@ -52,7 +52,6 @@
     outline: none;
 }
 
-
 .hamburger .bar {
     width: 100%;
     background-color: var(--action);
@@ -72,6 +71,11 @@
 .hamburger.is-active .bar:nth-child(3) {
     transform: rotate(45deg) translate(-0.6em, -0.6em);
     background-color: var(--primary);
+}
+
+html:has(.hamburger.is-active), body:has(.hamburger.is-active) {
+    height: 100%;
+    overflow: hidden;
 }
 
 #mobile-nav {
@@ -124,16 +128,18 @@
     opacity: 1;
 }
 
+
 #navbar #navLinks {
     display: none;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
     #mobile-nav {
         display: none;
     }
 
-    .hamburger, .hamburger .bar {
+    .hamburger,
+    .hamburger .bar {
         display: none;
     }
 
