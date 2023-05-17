@@ -3,9 +3,13 @@ import leafIcon from './assets/favicon.png';
 import ghIcon from './assets/github.svg';
 import fbLogo from './assets/facebook.svg';
 import ytLogo from './assets/youtube.svg';
-export default function Footer() {
+
+interface FooterProp {
+    hide?: boolean;
+}
+export default function Footer({ hide }: FooterProp) {
     return (
-        <div id="footer">
+        <div id="footer" className={hide ? 'hide' : undefined}>
             <img className="leaf-icon" src={leafIcon} alt="Leaf Icon" />
             <div className="icons">
                 <a

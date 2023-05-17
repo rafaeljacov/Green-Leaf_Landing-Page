@@ -19,6 +19,10 @@
     align-items: center;
 }
 
+#footer.hide {
+    display: none;
+}
+
 .leaf-icon {
     position: absolute;
     width: clamp(6em, 10vw, 15em);
