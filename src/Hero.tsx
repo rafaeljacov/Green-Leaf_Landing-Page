@@ -1,21 +1,58 @@
 import './Hero.css';
 import arrowRight from './assets/arrow-right.svg';
+import arrowRightHover from './assets/arrow-right-hover.svg';
+import { useState, useEffect } from 'react';
+import content from './content';
+
 export default function Hero() {
+    const [buttonHover, setButtonHover] = useState(false);
+    const [heroContent, setHeroContent] = useState(content[0]);
+    const buttonArrowSrc = (): string => {
+        if (window.innerWidth < 768) {
+            return arrowRight;
+        } else {
+            return buttonHover ? arrowRightHover : arrowRight;
+        }
+    };
+
+    useEffect(() => {
+        let i = 1;
+        setInterval(() => {
+            if (i === content.length) {
+                i = 0;
+            }
+            setHeroContent(content[i]);
+            i++;
+        }, 9000);
+    }, []);
+
+    function hover() {
+        setButtonHover((h) => !h);
+    }
+
+    function hoverOut() {
+        setButtonHover((h) => !h);
+    }
+
     return (
-            <div id="Hero">
-                <div id="content">
-                    <h1>
-                        Welcome to <span id="green">Green Leaf,</span>
-                    </h1>
-                    <p>
-                        <span>Inspiring, educating, and empowering</span> people
-                        to make positive changes in their daily lives that will
-                        benefit both the environment and themselves.
-                    </p>
-                </div>
-                <button>
-                    Volunteer <img src={arrowRight} alt="arror-right" />
-                </button>
+        <div id="Hero">
+            <div id="content">
+                <h1>
+                    Welcome to <span id="green">Green </span>
+                    <span id="leaf">Leaf,</span>
+                </h1>
+                <p> 
+                    {heroContent}
+                </p>
             </div>
+            <button
+                onMouseOver={hover}
+                onMouseOut={hoverOut}
+                className={buttonHover ? 'hovered' : undefined}
+            >
+                <span>Volunteer</span>{' '}
+                <img src={buttonArrowSrc()} alt="arrow-right" />
+            </button>
+        </div>
     );
 }

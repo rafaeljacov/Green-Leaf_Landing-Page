@@ -29,28 +29,28 @@ export default function Navbar({
                 </button>
                 <ul id="navLinks">
                     <li>
-                        <a href={linkURL}>Home</a>
+                        <a href={linkURL} target='_blank'>Home</a>
                     </li>
                     <li>
-                        <a href={linkURL}>News</a>
+                        <a href={linkURL} target='_blank'>News</a>
                     </li>
                     <li>
-                        <a href={linkURL}>
-                            Learning <br></br>Resources
+                        <a href={linkURL} target='_blank'>
+                            Learning Resources
                         </a>
                     </li>
                 </ul>
             </div>
-            <div id="mobile-nav" className={isActive ? "is-active" : ""}>
+            <div id="mobile-nav" className={isActive ? "is-active" : undefined}>
                 <ul id="mobile-navLinks">
                     <li>
-                        <a href={linkURL}>Home</a>
+                        <a href={linkURL} target='_blank'>Home</a>
                     </li>
                     <li>
-                        <a href={linkURL}>News</a>
+                        <a href={linkURL} target='_blank'>News</a>
                     </li>
                     <li>
-                        <a href={linkURL}>
+                        <a href={linkURL} target='_blank'>
                             Learning <br></br>Resources
                         </a>
                     </li>

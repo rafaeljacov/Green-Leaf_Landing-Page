@@ -6,10 +6,11 @@
     box-sizing: border-box;
 }
 
-
+:root {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 
 body {
-    width: 100vw;
-    height: 100vh;
-    background-color: #F5FFF6;
+    background-color: #f5fff6;
 }

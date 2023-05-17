@@ -34,21 +34,21 @@
     color: var(--highlight);
 }
 
+#content #leaf {
+    color: var(--primary);
+}
+
 #content p {
-    width: max(70%, 18rem);
+    width: max(75%, 18rem);
     margin: 0 auto;
     background-color: rgba(1, 20, 3, 0.55);
     border-radius: 1em;
-    font-size: clamp(1.3em, 2.6vw, 3rem);
+    font-size: clamp(1.5em, 3.5vw, 3rem);
     letter-spacing: 0.05em;
-    margin-top: 1.2em;
+    margin-top: clamp(1em, 10vh, 10em);
     text-align: center;
     padding: clamp(1em, 7vw, 1.7rem);
     color: var(--black5);
-}
-
-#content p > span {
-    color: var(--primary);
 }
 
 #Hero button {
@@ -56,15 +56,43 @@
     width: 16rem;
     padding: 0.4em;
     border: unset;
-    border-radius: 5em;
+    border-radius: 0.5em;
     background-color: var(--action);
     font-size: 2em;
     letter-spacing: 0.05em;
     color: var(--primary);
     align-self: center;
-
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.4em;
+    transition: 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+    #Hero {
+        background-size: 55%;
+    }
+
+    #content h1 {
+        margin: 15vh 0 0 3vw;
+        text-align: left;
+    }
+
+    #content p {
+        text-align: left;
+        color: var(--black75);
+        margin: unset;
+        background-color: unset;
+        letter-spacing: 0.06em;
+        line-height: 1.7em;
+        word-spacing: 0.08em;
+    }
+    #Hero button.hovered {
+        background-color: var(--primary);
+        color: var(--action);
+        cursor: pointer;
+        transform: scaleX(1);
+    }
+
 }
