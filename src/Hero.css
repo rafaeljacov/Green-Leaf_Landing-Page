@@ -80,6 +80,7 @@
 
     #content p {
         text-align: left;
+        max-width: 60%;
         color: var(--black75);
         margin: unset;
         background-color: unset;

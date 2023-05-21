@@ -4,6 +4,7 @@ import Hero from './Hero';
 import Footer from './Footer';
 import { useState } from 'react';
 
+//App
 export default function App() {
     const [isActive, setIsActive] = useState(false);
 
